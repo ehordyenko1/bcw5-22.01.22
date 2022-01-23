@@ -2,27 +2,27 @@ from math import hypot
 
 
 class Vector:
-    __slots__ = ('x', 'y')
+    __slots__ = ('_x', '_y')
 
     def __init__(self, x=0.0, y=0.0):
-        self.x = float(x)
-        self.y = float(y)
+        self._x = float(x)
+        self._y = float(y)
 
     @property
     def x(self):
-        return self.x
+        return self._x
 
     @property
     def y(self):
-        return self.y
+        return self._y
 
     @x.setter
     def x(self, value):
-        self.x = float(value)
+        self._x = float(value)
 
     @y.setter
     def y(self, value):
-        self.y = float(value)
+        self._y = float(value)
 
     def __eq__(self, other):
         if not isinstance(other, Vector):
@@ -66,3 +66,9 @@ class Vector:
 
 if __name__ == '__main__':
     vector = Vector(10, 15)
+    vector1 = Vector(10,15)
+
+    vector1.substr(vector)
+
+    print(vector)
+    print(vector1)
