@@ -2,8 +2,6 @@ from math import hypot
 
 
 class Vector:
-    __slots__ = ('_x', '_y')
-
     def __init__(self, x=0.0, y=0.0):
         self._x = float(x)
         self._y = float(y)
